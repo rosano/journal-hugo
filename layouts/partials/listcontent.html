@@ -1,9 +1,6 @@
 {{ range .Paginator.Pages }}
 <article class="post-list">
     <div class="title-group">
-        <div class="title">
-            <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-        </div>
         {{ if eq .Type "photos" }}
         <div class="album">
             <div class="date"><h5>{{ .Params.display_date }}</h5></div><div class="location"><h5>{{ .Params.location }}</h5></div>
