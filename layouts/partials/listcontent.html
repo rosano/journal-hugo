@@ -1,7 +1,10 @@
-{{ range .Paginator.Pages }}
 <article class="post-list">
+{{ range .Paginator.Pages.GroupByParam "day" "desc" }}
+    <p>{{ .Key | title }}</p>
     <div class="content">
-        {{- partial "article.html" . -}}
+        {{ range .Pages }}
+          {{- partial "article.html" . -}}
+        {{ end }}
     </div>
-</article>
 {{ end }}
+</article>
