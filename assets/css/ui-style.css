@@ -38,6 +38,10 @@ a:hover {
 	font-size: 90%;
 }
 
+.post p:first-child {
+	margin-top: 0;
+}
+
 blockquote {
 	font-size: 90%;
 	opacity: 0.7;
