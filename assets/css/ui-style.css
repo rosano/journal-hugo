@@ -49,3 +49,11 @@ blockquote {
 	padding-left: 8px;
 	border-left: 2px solid #ddd;
 }
+
+.paginator {
+ 	width: 425px;
+	padding: 15px;
+
+	display: flex;
+  justify-content: space-between;
+}
