@@ -7,12 +7,34 @@ body {
 	margin-top: 40px;
 }
 
+a {
+	color: #237fa1;
+	text-decoration: none;
+}
+
+h2 a {
+}
+
+header a {
+	color: black;
+	opacity: .5;
+}
+
+a:hover {
+	color: #c00;
+}
+
+.day {
+	opacity: .5;
+}
+
 .post {
 	width: 425px;
 	padding: 15px;
 	margin: 15px 0;
 	background: #f9f9f9;
 	border-radius: 3px;
+	font-family: Lucida Grande, Arial, sans-serif;
 }
 
 blockquote {
