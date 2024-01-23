@@ -1,10 +1,11 @@
 <article class="post-list">
 {{ range .Paginator.Pages.GroupByParam "day" "desc" }}
-    <p>{{ .Key | title }}</p>
+    {{ $t := time.AsTime .Key }}
+    <h1>{{ time.Format "Monday, January 2, 2006" $t }} </h1>
     <div class="content">
         {{ range .Pages }}
             {{ .Scratch.Set "kScope" "kScopeList" }}
-          {{- partial "article.html" . -}}
+            {{- partial "article.html" . -}}
         {{ end }}
     </div>
 {{ end }}
