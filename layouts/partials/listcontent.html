@@ -3,6 +3,7 @@
     <p>{{ .Key | title }}</p>
     <div class="content">
         {{ range .Pages }}
+            {{ .Scratch.Set "kScope" "kScopeList" }}
           {{- partial "article.html" . -}}
         {{ end }}
     </div>

@@ -3,7 +3,12 @@
         <div class="title">
             <h1>{{ .Title }}</h1>
         </div>
-        <div class="date"><h5>{{ .Params.date.Format "Jan 02 2006, 15h04" }}</h5></div>
+        <div class="date"><h5>
+        {{ if eq (.Scratch.Get "kScope") "kScopeList" }}
+            {{ .Params.date.Format "15h04" }}
+            {{else}}
+            {{ .Params.date.Format "Jan 02 2006, 15h04" }}
+            {{end}}</h5></div>
 
     </div>
     <article class="content">
